@@ -10,6 +10,24 @@ window.addEventListener('scroll', () => {
         header.style.background = "rgba(0,0,0,0.45)";
     }
 });
+
+// ----- HAMBURGER MENU -----
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+});
+
+// Fermer le menu quand on clique sur un lien
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+    });
+});
+
 // ----- VALIDACIÓN FORMULARIO -----
 const form = document.getElementById("form");
 const msgOk = document.getElementById("form-msg");
