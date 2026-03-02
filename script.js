@@ -58,7 +58,7 @@ form.addEventListener("submit", (e) => {
     }
 
     // Teléfono (solo si escribe algo)
-    if (telefono && telefono.length < 6) {
+    if (telefono && telefono.length < 9) {
         errorTelefono.textContent = "Número de teléfono demasiado corto.";
         hayError = true;
     }
