@@ -52,8 +52,8 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse {
@@ -456,7 +456,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center -20px;
+    object-position: center -40px;
     border-radius: 30px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -539,6 +539,20 @@ body {
     font-size: 32px;
     margin-bottom: 15px;
     display: block;
+}
+
+.kotlin-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #7f52ff;
+    background: rgba(127, 82, 255, 0.15);
+    border: 1px solid rgba(127, 82, 255, 0.3);
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
 .skill-card span {
@@ -626,27 +640,6 @@ body {
 .projects-grid .project-card:nth-child(5) {
     grid-column: 3;
     justify-self: end;
-}
-
-/* Mobile: Stack all projects */
-@media (max-width: 768px) {
-    .projects {
-        padding: 60px 20px;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .projects-grid .project-card:nth-child(1),
-    .projects-grid .project-card:nth-child(2),
-    .projects-grid .project-card:nth-child(3),
-    .projects-grid .project-card:nth-child(4),
-    .projects-grid .project-card:nth-child(5) {
-        grid-column: 1;
-        justify-self: center;
-    }
 }
 
 .project-card {
@@ -1188,6 +1181,15 @@ body {
     
     .services-grid, .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .projects-grid .project-card:nth-child(1),
+    .projects-grid .project-card:nth-child(2),
+    .projects-grid .project-card:nth-child(3),
+    .projects-grid .project-card:nth-child(4),
+    .projects-grid .project-card:nth-child(5) {
+        grid-column: 1;
+        justify-self: center;
     }
     
     .form-row {
