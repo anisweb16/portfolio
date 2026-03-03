@@ -466,6 +466,16 @@ body {
     z-index: 1;
 }
 
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
 .about-decoration {
     position: absolute;
     top: -20px;
@@ -579,6 +589,47 @@ body {
 .fa-python { color: #3776ab; }
 .fa-kotlin { color: #7f52ff; }
 .fa-android { color: #3ddc84; }
+.fa-react { color: #61dafb; }
+.fa-wordpress { color: #21759b; }
+
+/* Projets en forme de pyramide */
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.projects-grid .project-card {
+    width: 100%;
+    max-width: 800px;
+}
+
+.projects-grid .project-large {
+    max-width: 900px;
+}
+
+.projects-grid .project-card:nth-child(1),
+.projects-grid .project-card:nth-child(2) {
+    width: 100%;
+    max-width: 850px;
+}
+
+.projects-grid .project-card:nth-child(3),
+.projects-grid .project-card:nth-child(4),
+.projects-grid .project-card:nth-child(5) {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Responsive pyramid */
+@media (max-width: 768px) {
+    .projects-grid .project-card {
+        max-width: 100% !important;
+    }
+}
 
 /* ============================================
    PROJECTS SECTION
