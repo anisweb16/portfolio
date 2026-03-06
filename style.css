@@ -14,9 +14,6 @@
     --accent-secondary: #b0b0b0;
 }
 
-/* ============================================
-   GLOBAL STYLES
-============================================ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,9 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================
-   ANIMATIONS GLOBALES
-============================================ */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -67,9 +61,6 @@ body {
     animation: heroFadeIn 1s ease forwards;
 }
 
-/* ============================================
-   HEADER
-============================================ */
 .header {
     position: fixed;
     width: 100%;
@@ -78,7 +69,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 60px;
+    padding: 10px 60px;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -96,56 +87,40 @@ body {
     gap: 12px;
 }
 
-/* ============================================
-   LOGO — Orbitron · Auto KeyPress 3D · Scan Line
-============================================ */
 .logo { display: none; }
 
 .logo-text {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
     font-size: 13px;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.9);
     white-space: nowrap;
     display: inline-block;
     line-height: 1;
     position: relative;
     overflow: hidden;
     cursor: default;
-
-    /* Dégradé argent shimmer */
-    background: linear-gradient(
-        90deg,
-        #777 0%, #bbb 20%, #fff 40%, #fff 60%, #bbb 80%, #777 100%
-    );
+    background: linear-gradient(90deg, #777 0%, #bbb 20%, #fff 40%, #fff 60%, #bbb 80%, #777 100%);
     background-size: 220% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
     padding: 8px 14px;
-
-    /* Bordure double chip tech */
     border: 1px solid rgba(255, 255, 255, 0.45);
     outline: 1px solid rgba(255, 255, 255, 0.1);
     outline-offset: 3px;
     border-radius: 4px;
-
-    /* État HAUT (touche non appuyée) :
-       shadow bas = profondeur visible */
     box-shadow:
         0  5px 0   0   rgba(255, 255, 255, 0.18),
         0  6px 0   0   rgba(0,   0,   0,   0.7),
         0 -1px 0   0   rgba(255, 255, 255, 0.35),
         0  0   10px 0  rgba(200, 200, 200, 0.2);
-
-    /* Animation combinée : shimmer + pression automatique */
     animation:
         logoShimmer  3s   linear       infinite,
         keyPress     2.5s ease-in-out  infinite;
 }
 
-/* Scan line qui traverse */
 .logo-text::after {
     content: '';
     position: absolute;
@@ -153,28 +128,16 @@ body {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(
-        transparent,
-        rgba(255, 255, 255, 0.08),
-        transparent
-    );
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.08), transparent);
     animation: scanLine 2.5s linear infinite;
     pointer-events: none;
 }
 
-/* ── Shimmer argent ── */
 @keyframes logoShimmer {
     0%   { background-position: 220% center; }
     100% { background-position: 0% center; }
 }
 
-/* ── Auto KeyPress : touche qui s'enfonce et remonte ──
-   0-10%   : repos (soulevée)
-   15-25%  : enfoncement rapide
-   30-50%  : maintien enfoncé
-   55-70%  : remontée
-   75-100% : repos (pause avant prochain appui)
-*/
 @keyframes keyPress {
     0%, 10% {
         transform: translateY(0px);
@@ -202,46 +165,36 @@ body {
     }
 }
 
-/* ── Scan line ── */
 @keyframes scanLine {
     0%   { top: -60%; }
     100% { top: 120%; }
 }
 
-/* ============================================
-   FOOTER LOGO — même style clavier 3D auto
-============================================ */
 .footer-name {
     font-family: 'Orbitron', sans-serif;
     font-size: 13px;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.9);
     margin-bottom: 20px;
     display: inline-block;
     position: relative;
     overflow: hidden;
-
-    background: linear-gradient(
-        90deg,
-        #777 0%, #bbb 20%, #fff 40%, #fff 60%, #bbb 80%, #777 100%
-    );
+    background: linear-gradient(90deg, #777 0%, #bbb 20%, #fff 40%, #fff 60%, #bbb 80%, #777 100%);
     background-size: 220% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.45);
     outline: 1px solid rgba(255, 255, 255, 0.1);
     outline-offset: 3px;
     border-radius: 4px;
-
     box-shadow:
         0  5px 0   0   rgba(255, 255, 255, 0.18),
         0  6px 0   0   rgba(0,   0,   0,   0.7),
         0 -1px 0   0   rgba(255, 255, 255, 0.35),
         0  0   10px 0  rgba(200, 200, 200, 0.2);
-
     animation:
         logoShimmer  3s   linear       infinite,
         keyPress     2.5s ease-in-out  infinite;
@@ -256,8 +209,6 @@ body {
     animation: scanLine 2.5s linear infinite;
     pointer-events: none;
 }
-
-/* ============================================ */
 
 .brand-name {
     font-family: 'Space Grotesk', sans-serif;
@@ -293,8 +244,43 @@ body {
 .nav a:hover::after { width: 100%; }
 
 /* ============================================
-   HERO SECTION
+   LANGUAGE SWITCHER
 ============================================ */
+.lang-switcher {
+    display: flex;
+    gap: 5px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lang-btn {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: var(--gray-light);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.lang-btn.active {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+}
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -405,7 +391,6 @@ body {
     border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* Stats */
 .stats-container {
     display: flex;
     justify-content: center;
@@ -454,9 +439,6 @@ body {
     pointer-events: none;
 }
 
-/* ============================================
-   SERVICES
-============================================ */
 .services { padding: 100px 60px; background: #1a1a1a; }
 .section-header { text-align: center; margin-bottom: 60px; }
 .section-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; margin-bottom: 15px; color: var(--white); }
@@ -468,9 +450,6 @@ body {
 .service-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--white); }
 .service-card p  { font-size: 14px; color: var(--gray); line-height: 1.7; }
 
-/* ============================================
-   ABOUT
-============================================ */
 .about { padding: 100px 60px; background: radial-gradient(circle at top left, #1a1a1a 0%, #000000 45%, #000000 100%); }
 .about-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
 .about-image { position: relative; }
@@ -483,9 +462,6 @@ body {
 .feature-item { display: flex; align-items: center; gap: 10px; color: var(--light); font-size: 14px; }
 .feature-item i { color: var(--white); }
 
-/* ============================================
-   SKILLS
-============================================ */
 .skills { padding: 100px 60px; background: #1a1a1a; }
 .skills-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
 .skill-card { padding: 25px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
@@ -509,9 +485,6 @@ body {
 .fa-react    { color: #61dafb; }
 .fa-wordpress{ color: #21759b; }
 
-/* ============================================
-   PROJECTS
-============================================ */
 .projects { padding: 100px 60px; background: radial-gradient(circle at top left, #1a1a1a 0%, #000000 45%, #000000 100%); }
 .projects-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
 .projects-grid .project-card { width: 100%; }
@@ -539,9 +512,6 @@ body {
 .project-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.3s ease; }
 .project-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
 
-/* ============================================
-   CONTACT
-============================================ */
 .contact-section { padding: 100px 60px; background: #1a1a1a; }
 .contact-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; }
 .contact-box { padding: 40px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; }
@@ -573,9 +543,6 @@ body {
 .option-label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
 .option-value { font-size: 14px; color: var(--white); font-weight: 500; }
 
-/* ============================================
-   FOOTER
-============================================ */
 .footer { padding: 40px 60px; background: rgba(0,0,0,0.5); border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
 .footer-socials { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
 .social-link { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; color: var(--light); text-decoration: none; font-size: 16px; transition: all 0.3s ease; }
@@ -584,18 +551,12 @@ body {
 .footer-neon-bar { height: 3px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%); filter: blur(4px); animation: neonPulse 3s infinite ease-in-out; margin-top: -20px; }
 @keyframes neonPulse { 0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; } }
 
-/* ============================================
-   HAMBURGER
-============================================ */
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 6px; width: 30px; height: 30px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 0; }
 .hamburger span { display: block; width: 100%; height: 2px; background: var(--white); transition: all 0.3s ease; border-radius: 2px; }
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
 @media (max-width: 1024px) {
     .header { padding: 10px 30px; }
     .hero { padding: 70px 30px 60px; }
@@ -611,6 +572,12 @@ body {
     .nav.active { right: 0; }
     .nav a { font-size: 18px; }
     .hamburger { display: flex; }
+    .lang-switcher {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 10px;
+    }
     .hero { padding: 90px 20px 50px; }
     .hero-title { font-size: 36px; }
     .hero-desc { font-size: 15px; }

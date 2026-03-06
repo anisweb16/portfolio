@@ -5,134 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio – ANIS BEN AYED | Desarrollador DAM</title>
     <meta name="description" content="Portfolio de Anis Ben Ayed - Desarrollador de aplicaciones multiplataforma">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    
-    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- HEADER -->
     <header class="header">
         <div class="header-left">
             <img src="img/logo3.png" alt="Logo ABA" class="logo">
             <span class="logo-text">&lt;A/BA&gt;</span>
         </div>
         <button class="hamburger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
         <nav class="nav">
-            <a href="#hero">Inicio</a>
-            <a href="#about">Sobre mí</a>
-            <a href="#services">Servicios</a>
+            <a href="#hero"     data-i18n="nav.inicio">Inicio</a>
+            <a href="#about"    data-i18n="nav.sobre">Sobre mí</a>
+            <a href="#services" data-i18n="nav.servicios">Servicios</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            <a href="#projects" data-i18n="nav.proyectos">Proyectos</a>
+            <a href="#contact"  data-i18n="nav.contacto">Contacto</a>
+             <div class="lang-switcher">
+              <button class="lang-btn active" data-lang="es">
+              <img src="https://flagcdn.com/w20/es.png" alt="ES" width="20" height="14"> ES
+              </button>
+              <span class="lang-sep">|</span>
+              <button class="lang-btn" data-lang="en">
+              <img src="https://flagcdn.com/w20/gb.png" alt="EN" width="20" height="14"> EN
+              </button>
+            </div>
         </nav>
     </header>
 
-    <!-- HERO -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <p class="hero-sub reveal">Portfolio · Desarrollador DAM</p>
-
+            <p class="hero-sub reveal" data-i18n="hero.sub">Portfolio · Desarrollador DAM</p>
             <h1 class="hero-title reveal">
-                Hola, soy <span class="highlight">Anis</span><br>
+                <span data-i18n="hero.greeting">Hola, soy</span> <span class="highlight">Anis</span><br>
                 <span class="typed-text"></span>
             </h1>
-
-            <p class="hero-desc reveal">
-                Desarrollador de aplicaciones multiplataforma con enfoque en interfaces limpias, 
-                código claro y soluciones digitales modernas.
+            <p class="hero-desc reveal" data-i18n="hero.desc">
+                Desarrollador de aplicaciones multiplataforma con enfoque en interfaces limpias, código claro y soluciones digitales modernas.
             </p>
-
             <div class="hero-buttons reveal">
                 <a href="#projects" class="btn primary">
-                    <i class="fas fa-briefcase"></i> Ver proyectos
+                    <i class="fas fa-briefcase"></i> <span data-i18n="hero.btn_projects">Ver proyectos</span>
                 </a>
                 <a href="#contact" class="btn ghost">
-                    <i class="fas fa-envelope"></i> Contactar
+                    <i class="fas fa-envelope"></i> <span data-i18n="hero.btn_contact">Contactar</span>
                 </a>
             </div>
-
-            <!-- Stats -->
             <div class="stats-container reveal">
                 <div class="stat-item">
                     <span class="stat-number" data-count="2">0</span>
-                    <span class="stat-label">Años exp.</span>
+                    <span class="stat-label" data-i18n="hero.stat_exp">Años exp.</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number" data-count="20">0</span>
-                    <span class="stat-label">Proyectos</span>
+                    <span class="stat-label" data-i18n="hero.stat_projects">Proyectos</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number" data-count="10">0</span>
-                    <span class="stat-label">Tecnologías</span>
+                    <span class="stat-label" data-i18n="hero.stat_tech">Tecnologías</span>
                 </div>
             </div>
-
             <p class="hero-end-tag reveal"><A/BA></p>
         </div>
-        
         <div class="hero-decoration"></div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" class="section services">
         <div class="section-header reveal">
-            <h2>Servicios</h2>
-            <p>Lo que puedo ofrecerte para tu proyecto digital</p>
+            <h2 data-i18n="services.title">Servicios</h2>
+            <p data-i18n="services.subtitle">Lo que puedo ofrecerte para tu proyecto digital</p>
         </div>
-
         <div class="services-grid">
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3>Desarrollo Web</h3>
-                <p>Creación de sitios web modernos, responsivos y optimizados con las últimas tecnologías.</p>
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3 data-i18n="services.web.title">Desarrollo Web</h3>
+                <p data-i18n="services.web.desc">Creación de sitios web modernos, responsivos y optimizados con las últimas tecnologías.</p>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>Aplicaciones Móviles</h3>
-                <p>Desarrollo de apps nativas y cross-platform para Android e iOS.</p>
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3 data-i18n="services.mobile.title">Aplicaciones Móviles</h3>
+                <p data-i18n="services.mobile.desc">Desarrollo de apps nativas y cross-platform para Android e iOS.</p>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h3>Diseño UI/UX</h3>
-                <p>Diseño de interfaces atractivas y experiencia de usuario optimizados.</p>
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <h3 data-i18n="services.ui.title">Diseño UI/UX</h3>
+                <p data-i18n="services.ui.desc">Diseño de interfaces atractivas y experiencia de usuario optimizados.</p>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <h3>Base de Datos</h3>
-                <p>Diseño y gestión de bases de datos eficientes, optimizadas y seguras.</p>
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3 data-i18n="services.db.title">Base de Datos</h3>
+                <p data-i18n="services.db.desc">Diseño y gestión de bases de datos eficientes, optimizadas y seguras.</p>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="section about">
         <div class="about-container">
             <div class="about-image reveal">
@@ -143,148 +119,53 @@
             </div>
             <div class="about-content reveal">
                 <div class="section-header" style="text-align: left; margin-bottom: 20px;">
-                    <h2>Sobre mí</h2>
+                    <h2 data-i18n="about.title">Sobre mí</h2>
                 </div>
-                <p class="about-text">
-                    Soy <strong>Anis Ben Ayed</strong>, desarrollador de aplicaciones multiplataforma con un enfoque 
-                    en interfaces limpias, estructuras ordenadas y soluciones digitales modernas.
+                <p class="about-text" data-i18n="about.p1">
+                    Soy <strong>Anis Ben Ayed</strong>, desarrollador de aplicaciones multiplataforma con un enfoque en interfaces limpias, estructuras ordenadas y soluciones digitales modernas.
                 </p>
-                <p class="about-text">
-                    Me gusta crear proyectos funcionales, rápidos y visualmente agradables utilizando 
-                    tecnologías actuales del entorno DAM como Java, SQL, JavaScript y diseño de interfaces.
+                <p class="about-text" data-i18n="about.p2">
+                    Me gusta crear proyectos funcionales, rápidos y visualmente agradables utilizando tecnologías actuales del entorno DAM como Java, SQL, JavaScript y diseño de interfaces.
                 </p>
-                <p class="about-text">
-                    Actualmente estudio en Madrid y sigo mejorando cada día mis conocimientos en 
-                    desarrollo de software y diseño UI/UX.
+                <p class="about-text" data-i18n="about.p3">
+                    Actualmente estudio en Madrid y sigo mejorando cada día mis conocimientos en desarrollo de software y diseño UI/UX.
                 </p>
-                
                 <div class="about-features">
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Aprendizaje continuo</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Código limpio</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Trabajo en equipo</span>
-                    </div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span data-i18n="about.f1">Aprendizaje continuo</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span data-i18n="about.f2">Código limpio</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span data-i18n="about.f3">Trabajo en equipo</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="section skills">
         <div class="section-header reveal">
             <h2>Skills</h2>
-            <p>Tecnologías y herramientas con las que trabajo</p>
+            <p data-i18n="skills.subtitle">Tecnologías y herramientas con las que trabajo</p>
         </div>
-
         <div class="skills-grid">
-            <div class="skill-card reveal">
-                <i class="fab fa-html5 skill-icon"></i>
-                <span>HTML5</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 90%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-css3-alt skill-icon"></i>
-                <span>CSS3</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-js skill-icon"></i>
-                <span>JavaScript</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 80%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-java skill-icon"></i>
-                <span>Java</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fas fa-database skill-icon"></i>
-                <span>SQL / MariaDB</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 70%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-git-alt skill-icon"></i>
-                <span>Git</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 80%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-figma skill-icon"></i>
-                <span>Figma</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-python skill-icon"></i>
-                <span>Python</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 65%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-react skill-icon"></i>
-                <span>React</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <span class="kotlin-icon">K</span>
-                <span>Kotlin</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 70%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-android skill-icon"></i>
-                <span>Android</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 65%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-react skill-icon"></i>
-                <span>React Native</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 60%"></div>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <i class="fab fa-wordpress skill-icon"></i>
-                <span>WordPress</span>
-                <div class="skill-level">
-                    <div class="skill-progress" style="--progress: 80%"></div>
-                </div>
-            </div>
+            <div class="skill-card reveal"><i class="fab fa-html5 skill-icon"></i><span>HTML5</span><div class="skill-level"><div class="skill-progress" style="--progress: 90%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-css3-alt skill-icon"></i><span>CSS3</span><div class="skill-level"><div class="skill-progress" style="--progress: 85%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-js skill-icon"></i><span>JavaScript</span><div class="skill-level"><div class="skill-progress" style="--progress: 80%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-java skill-icon"></i><span>Java</span><div class="skill-level"><div class="skill-progress" style="--progress: 75%"></div></div></div>
+            <div class="skill-card reveal"><i class="fas fa-database skill-icon"></i><span>SQL / MariaDB</span><div class="skill-level"><div class="skill-progress" style="--progress: 70%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-git-alt skill-icon"></i><span>Git</span><div class="skill-level"><div class="skill-progress" style="--progress: 80%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-figma skill-icon"></i><span>Figma</span><div class="skill-level"><div class="skill-progress" style="--progress: 75%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-python skill-icon"></i><span>Python</span><div class="skill-level"><div class="skill-progress" style="--progress: 65%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-react skill-icon"></i><span>React</span><div class="skill-level"><div class="skill-progress" style="--progress: 75%"></div></div></div>
+            <div class="skill-card reveal"><span class="kotlin-icon">K</span><span>Kotlin</span><div class="skill-level"><div class="skill-progress" style="--progress: 70%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-android skill-icon"></i><span>Android</span><div class="skill-level"><div class="skill-progress" style="--progress: 65%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-react skill-icon"></i><span>React Native</span><div class="skill-level"><div class="skill-progress" style="--progress: 60%"></div></div></div>
+            <div class="skill-card reveal"><i class="fab fa-wordpress skill-icon"></i><span>WordPress</span><div class="skill-level"><div class="skill-progress" style="--progress: 80%"></div></div></div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="section projects">
         <div class="section-header reveal">
-            <h2>Proyectos</h2>
-            <p>Una selección de mis trabajos más relevantes</p>
+            <h2 data-i18n="projects.title">Proyectos</h2>
+            <p data-i18n="projects.subtitle">Una selección de mis trabajos más relevantes</p>
         </div>
-
         <div class="projects-grid">
             <div class="project-card reveal project-large">
                 <div class="project-image damas"></div>
@@ -293,16 +174,15 @@
                         <span class="tag"><span style="font-weight:bold;color:#7f52ff;">K</span> Kotlin</span>
                         <span class="tag"><i class="fab fa-android"></i> Android</span>
                     </div>
-                    <h3 class="project-title">Juego de Damas</h3>
-                    <p class="project-desc">Aplicación móvil con lógica de movimientos, diseño de tablero y validación de jugadas.</p>
+                    <h3 class="project-title" data-i18n="projects.p1.title">Juego de Damas</h3>
+                    <p class="project-desc" data-i18n="projects.p1.desc">Aplicación móvil con lógica de movimientos, diseño de tablero y validación de jugadas.</p>
                     <div class="project-links">
                         <a class="project-btn" href="https://github.com/anisweb16/juego_de_dama" target="_blank">
-                            <i class="fab fa-github"></i> Código
+                            <i class="fab fa-github"></i> <span data-i18n="projects.code">Código</span>
                         </a>
                     </div>
                 </div>
             </div>
-
             <div class="project-card reveal project-large">
                 <div class="project-image gameweb"></div>
                 <div class="project-content">
@@ -311,16 +191,15 @@
                         <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
                         <span class="tag"><i class="fab fa-js"></i> JS</span>
                     </div>
-                    <h3 class="project-title">Game — Página Web</h3>
-                    <p class="project-desc">Sitio web moderno con navegación fluida y diseño responsive.</p>
+                    <h3 class="project-title" data-i18n="projects.p2.title">Game — Página Web</h3>
+                    <p class="project-desc" data-i18n="projects.p2.desc">Sitio web moderno con navegación fluida y diseño responsive.</p>
                     <div class="project-links">
                         <a class="project-btn" href="https://github.com/anisweb16/game" target="_blank">
-                            <i class="fab fa-github"></i> Código
+                            <i class="fab fa-github"></i> <span data-i18n="projects.code">Código</span>
                         </a>
                     </div>
                 </div>
             </div>
-
             <div class="project-card reveal">
                 <div class="project-image gym"></div>
                 <div class="project-content">
@@ -328,16 +207,15 @@
                         <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
                         <span class="tag"><i class="fab fa-html5"></i> HTML</span>
                     </div>
-                    <h3 class="project-title">Formulario ANIS_GYM</h3>
-                    <p class="project-desc">Formulario profesional con validación en tiempo real y diseño responsive.</p>
+                    <h3 class="project-title" data-i18n="projects.p3.title">Formulario ANIS_GYM</h3>
+                    <p class="project-desc" data-i18n="projects.p3.desc">Formulario profesional con validación en tiempo real y diseño responsive.</p>
                     <div class="project-links">
                         <a class="project-btn" href="https://github.com/anisweb16/formulario_anis_gym" target="_blank">
-                            <i class="fab fa-github"></i> Código
+                            <i class="fab fa-github"></i> <span data-i18n="projects.code">Código</span>
                         </a>
                     </div>
                 </div>
             </div>
-
             <div class="project-card reveal">
                 <div class="project-image tickets"></div>
                 <div class="project-content">
@@ -345,27 +223,26 @@
                         <span class="tag"><i class="fab fa-python"></i> Python</span>
                         <span class="tag"><i class="fas fa-database"></i> MySQL</span>
                     </div>
-                    <h3 class="project-title">Tickets SQL</h3>
-                    <p class="project-desc">Script ETL para procesamiento y almacenamiento de tickets en MySQL.</p>
+                    <h3 class="project-title" data-i18n="projects.p4.title">Tickets SQL</h3>
+                    <p class="project-desc" data-i18n="projects.p4.desc">Script ETL para procesamiento y almacenamiento de tickets en MySQL.</p>
                     <div class="project-links">
                         <a class="project-btn" href="https://github.com/anisweb16/Proyecto_Tickets_SQL" target="_blank">
-                            <i class="fab fa-github"></i> Código
+                            <i class="fab fa-github"></i> <span data-i18n="projects.code">Código</span>
                         </a>
                     </div>
                 </div>
             </div>
-
             <div class="project-card reveal">
                 <div class="project-image github"></div>
                 <div class="project-content">
                     <div class="project-tags">
                         <span class="tag"><i class="fab fa-github"></i> GitHub</span>
                     </div>
-                    <h3 class="project-title">Más proyectos</h3>
-                    <p class="project-desc">Explora todos mis repositorios con ejercicios y aplicaciones completas.</p>
+                    <h3 class="project-title" data-i18n="projects.p5.title">Más proyectos</h3>
+                    <p class="project-desc" data-i18n="projects.p5.desc">Explora todos mis repositorios con ejercicios y aplicaciones completas.</p>
                     <div class="project-links">
                         <a class="project-btn" href="https://github.com/anisweb16" target="_blank">
-                            <i class="fab fa-github"></i> Ver más
+                            <i class="fab fa-github"></i> <span data-i18n="projects.more">Ver más</span>
                         </a>
                     </div>
                 </div>
@@ -373,21 +250,19 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="contact-section">
         <div class="section-header reveal">
-            <h2>Contacto</h2>
-            <p>¿Tienes un proyecto en mente? Hablemos</p>
+            <h2 data-i18n="contact.title">Contacto</h2>
+            <p data-i18n="contact.subtitle">¿Tienes un proyecto en mente? Hablemos</p>
         </div>
-
         <div class="contact-container">
             <div class="contact-box">
-                <h3>Envíame un mensaje</h3>
+                <h3 data-i18n="contact.form.title">Envíame un mensaje</h3>
                 <form id="form">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" placeholder="Tu nombre">
+                            <label for="nombre" data-i18n="contact.form.name">Nombre</label>
+                            <input type="text" id="nombre" data-i18n-ph="contact.form.name_ph" placeholder="Tu nombre">
                             <span id="error-nombre" class="error-msg"></span>
                         </div>
                         <div class="form-group">
@@ -398,86 +273,72 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="telefono">Teléfono</label>
+                            <label for="telefono" data-i18n="contact.form.phone">Teléfono</label>
                             <input type="text" id="telefono" placeholder="+34 600 000 000">
                             <span id="error-telefono" class="error-msg"></span>
                         </div>
                         <div class="form-group">
-                            <label for="asunto">Asunto</label>
+                            <label for="asunto" data-i18n="contact.form.subject">Asunto</label>
                             <select id="asunto">
-                                <option value="">Selecciona...</option>
-                                <option>Proyecto web</option>
-                                <option>Aplicación móvil</option>
-                                <option>Colaboración</option>
+                                <option value="" data-i18n="contact.form.select">Selecciona...</option>
+                                <option data-i18n="contact.form.opt1">Proyecto web</option>
+                                <option data-i18n="contact.form.opt2">Aplicación móvil</option>
+                                <option data-i18n="contact.form.opt3">Colaboración</option>
                             </select>
                             <span id="error-asunto" class="error-msg"></span>
                         </div>
                     </div>
                     <div class="form-group full">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        <label for="mensaje" data-i18n="contact.form.message">Mensaje</label>
+                        <textarea id="mensaje" data-i18n-ph="contact.form.message_ph" placeholder="Cuéntame sobre tu proyecto..."></textarea>
                         <span id="error-mensaje" class="error-msg"></span>
                     </div>
                     <div class="checkbox-row">
                         <input type="checkbox" id="privacidad">
-                        <p>Acepto la política de privacidad</p>
+                        <p data-i18n="contact.form.privacy">Acepto la política de privacidad</p>
                     </div>
                     <span id="error-privacidad" class="error-msg"></span>
-                    <p id="form-msg" class="form-success hidden">¡Mensaje enviado correctamente!</p>
+                    <p id="form-msg" class="form-success hidden" data-i18n="contact.form.success">¡Mensaje enviado correctamente!</p>
                     <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.send">Enviar mensaje</span>
                     </button>
                 </form>
             </div>
-
             <div class="info-box">
-                <h3>Otros medios</h3>
-                <p class="info-text">También puedes contactarme por estos canales:</p>
+                <h3 data-i18n="contact.other.title">Otros medios</h3>
+                <p class="info-text" data-i18n="contact.other.subtitle">También puedes contactarme por estos canales:</p>
                 <div class="contact-options">
                     <a href="mailto:anisbenayed69@gmail.com" class="contact-option">
                         <div class="option-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="option-text">
-                            <span class="option-label">Email</span>
-                            <span class="option-value">anisbenayed69@gmail.com</span>
-                        </div>
+                        <div class="option-text"><span class="option-label">Email</span><span class="option-value">anisbenayed69@gmail.com</span></div>
                     </a>
                     <a href="https://github.com/anisweb16" target="_blank" class="contact-option">
                         <div class="option-icon"><i class="fab fa-github"></i></div>
-                        <div class="option-text">
-                            <span class="option-label">GitHub</span>
-                            <span class="option-value">@anisweb16</span>
-                        </div>
+                        <div class="option-text"><span class="option-label">GitHub</span><span class="option-value">@anisweb16</span></div>
                     </a>
                     <a href="https://www.linkedin.com/in/anis-benayed-4b4b95281" target="_blank" class="contact-option">
                         <div class="option-icon"><i class="fab fa-linkedin"></i></div>
-                        <div class="option-text">
-                            <span class="option-label">LinkedIn</span>
-                            <span class="option-value">Anis Ben Ayed</span>
-                        </div>
+                        <div class="option-text"><span class="option-label">LinkedIn</span><span class="option-value">Anis Ben Ayed</span></div>
                     </a>
                     <a href="https://www.instagram.com/anis_benayed/?hl=fr" target="_blank" class="contact-option">
                         <div class="option-icon"><i class="fab fa-instagram"></i></div>
-                        <div class="option-text">
-                            <span class="option-label">Instagram</span>
-                            <span class="option-value">@anis_benayed</span>
-                        </div>
+                        <div class="option-text"><span class="option-label">Instagram</span><span class="option-value">@anis_benayed</span></div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
-            <p class="footer-name">&lt;A/BA&gt; — Portafolio de Desarrollo</p>
+            <p class="footer-name">&lt;A/BA&gt; — <span data-i18n="footer.tagline">Portafolio de Desarrollo</span></p>
             <div class="footer-socials">
                 <a href="https://github.com/anisweb16" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/anis-benayed-4b4b95281" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/anis_benayed/?hl=fr" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:anisbenayed69@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
-            <p class="footer-copy">© 2025 — Todos los derechos reservados</p>
+            <p class="footer-copy" data-i18n="footer.copy">© 2025 — Todos los derechos reservados</p>
         </div>
     </footer>
 
@@ -485,46 +346,24 @@
 
     <script src="script.js"></script>
     <script>
-        var typed = new Typed('.typed-text', {
-            strings: ['Desarrollador DAM', 'Creador Web', 'Diseñador UI/UX', 'Programador'],
-            typeSpeed: 60,
-            backSpeed: 40,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|'
-        });
-
         function animateStats() {
             const statNumbers = document.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-count'));
-                const duration = 2000;
-                const step = target / (duration / 16);
+                const step = target / (2000 / 16);
                 let current = 0;
-                const updateCounter = () => {
+                const update = () => {
                     current += step;
-                    if (current < target) {
-                        stat.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        stat.textContent = target + '+';
-                    }
+                    if (current < target) { stat.textContent = Math.floor(current); requestAnimationFrame(update); }
+                    else { stat.textContent = target + '+'; }
                 };
-                updateCounter();
+                update();
             });
         }
-
-        const statsSection = document.querySelector('.stats-container');
         const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateStats();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) { animateStats(); statsObserver.unobserve(entry.target); } });
         }, { threshold: 0.5 });
-
-        statsObserver.observe(statsSection);
+        statsObserver.observe(document.querySelector('.stats-container'));
     </script>
 </body>
 </html>
