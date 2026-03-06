@@ -14,6 +14,7 @@ const translations = {
         "hero.desc":          "Desarrollador de aplicaciones multiplataforma con enfoque en interfaces limpias, código claro y soluciones digitales modernas.",
         "hero.btn_projects":  "Ver proyectos",
         "hero.btn_contact":   "Contactar",
+        "hero.btn_cv":        "Ver CV",
         "hero.stat_exp":      "Años exp.",
         "hero.stat_projects": "Proyectos",
         "hero.stat_tech":     "Tecnologías",
@@ -99,6 +100,7 @@ const translations = {
         "hero.desc":          "Multiplatform application developer focused on clean interfaces, clear code and modern digital solutions.",
         "hero.btn_projects":  "View projects",
         "hero.btn_contact":   "Contact me",
+        "hero.btn_cv":        "View CV",
         "hero.stat_exp":      "Years exp.",
         "hero.stat_projects": "Projects",
         "hero.stat_tech":     "Technologies",
@@ -180,6 +182,25 @@ const translations = {
 let currentLang = 'es';
 let typedInstance = null;
 
+function animateCounters() {
+    document.querySelectorAll('.stat-number').forEach(stat => {
+        stat.textContent = '0';
+        const target = parseInt(stat.getAttribute('data-count'));
+        const step = target / (2000 / 16);
+        let current = 0;
+        const update = () => {
+            current += step;
+            if (current < target) {
+                stat.textContent = Math.floor(current);
+                requestAnimationFrame(update);
+            } else {
+                stat.textContent = target + '+';
+            }
+        };
+        update();
+    });
+}
+
 function applyTranslations(lang) {
     const t = translations[lang];
     if (!t) return;
@@ -205,6 +226,27 @@ function applyTranslations(lang) {
         strings: t["typed.strings"],
         typeSpeed: 60, backSpeed: 40, loop: true, showCursor: true, cursorChar: '|'
     });
+
+    // Réinitialiser reveal scroll animations
+    document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.remove('is-visible');
+    });
+    setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    }, 50);
+
+    // Réinitialiser hero fade-in
+    document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+        el.style.animation = 'none';
+        el.offsetHeight;
+        el.style.animation = '';
+        el.style.animationDelay = (i * 0.15) + 's';
+    });
+
+    // Réinitialiser compteurs
+    animateCounters();
 }
 
 // ============================================

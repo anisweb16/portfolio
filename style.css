@@ -391,6 +391,40 @@ body {
     border-color: rgba(255, 255, 255, 0.25);
 }
 
+.btn.cv-btn {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn.cv-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn.cv-btn:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: var(--white);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn.cv-btn:hover::before {
+    opacity: 1;
+}
+
+.btn.cv-btn i {
+    color: #ff4444;
+    font-size: 16px;
+}
+
 .stats-container {
     display: flex;
     justify-content: center;
