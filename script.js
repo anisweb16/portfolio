@@ -54,6 +54,8 @@ const translations = {
         "projects.p4.desc":  "Script ETL para procesamiento y almacenamiento de tickets en MySQL.",
         "projects.p5.title": "Más proyectos",
         "projects.p5.desc":  "Explora todos mis repositorios con ejercicios y aplicaciones completas.",
+        "projects.p6.title": "Salamanca Maison",
+        "projects.p6.desc":  "Prototipo web de marca de mobiliario de lujo en el barrio de Salamanca, Madrid.",
 
         "contact.title":           "Contacto",
         "contact.subtitle":        "¿Tienes un proyecto en mente? Hablemos",
@@ -140,6 +142,8 @@ const translations = {
         "projects.p4.desc":  "ETL script for processing and storing tickets in MySQL.",
         "projects.p5.title": "More projects",
         "projects.p5.desc":  "Explore all my repositories with exercises and complete applications.",
+        "projects.p6.title": "Salamanca Maison",
+        "projects.p6.desc":  "Web prototype for a luxury furniture brand in the Salamanca district of Madrid.",
 
         "contact.title":           "Contact",
         "contact.subtitle":        "Have a project in mind? Let's talk",
@@ -215,6 +219,9 @@ function applyTranslations(lang) {
         const key = el.getAttribute('data-i18n-ph');
         if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
     });
+
+    const cvBtn = document.getElementById('cv-btn');
+    if (cvBtn) cvBtn.href = lang === 'en' ? 'cv-anis-en.pdf' : 'cv-anis-es.pdf';
 
     document.documentElement.setAttribute('lang', lang);
     document.title = lang === 'en'

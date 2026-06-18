@@ -536,6 +536,7 @@ body {
 .project-image.gym     { background-image: url("img/proyectos/proyecto3.png"); }
 .project-image.tickets { background-image: url("img/proyectos/proyecto4.png"); }
 .project-image.github  { background-image: url("img/proyectos/github.png"); }
+.project-image.salamanca { background: linear-gradient(135deg, #1a0f05 0%, #2e1f0a 30%, #5c3d10 60%, #9a6820 85%, #c9a044 100%); }
 .project-content { padding: 25px; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
 .tag { padding: 4px 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; font-size: 11px; color: var(--light); text-transform: uppercase; letter-spacing: 0.05em; }
